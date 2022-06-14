@@ -3,9 +3,10 @@ const app = express()
 const PORT = process.env.PORT || 8985
 const dotenv = require('dotenv')
 const mongoose = require('mongoose')
+const authRoute = require('./routes/auth')
 
 require('dotenv').config()
-
+app.use(express.json());
 // connect to mongoDB
 mongoose.connect(process.env.MONGO_DB_HOST, {
     useNewUrlParser: true,  // new url parser
@@ -20,7 +21,7 @@ mongoose.connect(process.env.MONGO_DB_HOST, {
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
-app.use('/api/v1', (req,res) => {
+app.get('/api/v1/', (req,res) => {
     res.json({
         message: 'Welcome to the API',
         version: '1.0.0',
@@ -32,4 +33,8 @@ app.use('/api/v1', (req,res) => {
     }).status(200) // 200 is the status code for success
 })
 
+app.post('/api/auth', authRoute);
+
+
+ 
 app.listen(PORT, () => console.log(`Blog app listening on port ${PORT}!`))
