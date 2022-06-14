@@ -1,40 +1,24 @@
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 8985
-const dotenv = require('dotenv')
 const mongoose = require('mongoose')
 const authRoute = require('./routes/auth')
+const userRoute = require('./routes/users')
+const postRoute = require('./routes/posts')
 
 require('dotenv').config()
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // connect to mongoDB
-mongoose.connect(process.env.MONGO_DB_HOST, {
-    useNewUrlParser: true,  // new url parser
-    useUnifiedTopology: true, // new topology
-}).then(() => {
-    console.log('Connected to MongoDB')
-}
-).catch(err => {
-    console.log(err)
-});
+mongoose.connect(process.env.MONGO_DB_HOST).then(() => 
+console.log('Connected to MongoDB'))
+.catch(err => console.log(err));
 
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.use('/api/auth', authRoute);
+app.use('/api/users', userRoute);
 
-app.get('/api/v1/', (req,res) => {
-    res.json({
-        message: 'Welcome to the API',
-        version: '1.0.0',
-        "appname": "Blog API",
-        "description": "This is a simple blog API",
-        "author": "Ankitjha-Webdev",
-        "email": "ankitkumarcse91@gmail.com",
-        "github": "https://github.com/ankitjha-webdev/blog-app.git",
-    }).status(200) // 200 is the status code for success
-})
-
-app.post('/api/auth', authRoute);
-
-
+app.use('/api/posts', postRoute);
  
 app.listen(PORT, () => console.log(`Blog app listening on port ${PORT}!`))
