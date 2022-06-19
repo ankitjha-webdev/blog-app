@@ -1,0 +1,43 @@
+.about{
+    padding: 20px;
+    text-align: center;
+}
+.about h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.about p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.about img{
+    width: 100%;
+}
+.about .social{
+    margin-top: 20px;
+}
+.about .social a{
+    margin-right: 20px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+.about .social a:hover{
+    transform: scale(1.2);
+}
+.about .social a.facebook{
+    background: #3b5998;
+}
+.about .social a.twitter{
+    background: #00acee;
+}
+.about .social a.instagram{
+    background: #e1306c;
+}
+.about .social a.linkedin{
+    background: #0077b5;
+}
+.about .social a.whatsapp{
+    background: #25d366;
+}

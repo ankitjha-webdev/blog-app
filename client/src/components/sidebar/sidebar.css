@@ -1,0 +1,137 @@
+.sidebar{
+    flex: 3;
+    margin: 20px;
+    padding-bottom: 30px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.sidebar img {
+    width: 100%;
+    height: auto;
+
+}
+.sidebar p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #000;
+    padding: 10px;
+    
+}
+
+.sidebarItem{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    /* center items */
+    justify-content: center;
+
+}
+.sidebarItem:hover{
+    background-color: #f5f5f5;
+}
+.sidebarItem:hover .sidebarListItem{
+    color: #000;
+}
+.sidebarHi{
+  
+    align-items: center;
+    height: 32px;
+    width: 32px;
+
+}
+.sidebarList{
+    /* sidebarList center */
+    margin-right: 2rem;
+    list-style: none;
+    margin-bottom: 30px;
+}
+.sidebarListItem{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+    
+}
+.sidebarListItem a{
+    text-decoration: none;
+    color: #000;
+}
+.sidebarListItem:hover{
+    background-color: #f5f5f5;
+}
+.sidebarTitle{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border-top: 1px solid #a7a7a4;
+    border-bottom: 1px solid #a7a7a4;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    font-weight: 600;
+    color:#222;
+    line-height: 20px;
+}
+
+.sidebarImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sidebarSocial{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    display: flow-root;
+    /* flex-direction: column; */
+    align-items: center;
+
+}
+.sidebarSocial a{
+    text-decoration: none;
+    color: #000;
+}
+.sidebarSocial a i{
+   padding-left: 20px;
+}
+.sidebarSocial a:hover i{
+    color: white;
+    background-color: #000;
+}
+
+/* everything should be center */
+.sidebarIcon{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    align-items: center;
+    height: 100%;
+}

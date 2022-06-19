@@ -1,0 +1,90 @@
+.singlepost {
+    flex: 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    margin-left: 1.5rem;
+
+}
+
+.singlePostWrapper {
+    align-items: center;
+    padding: 0.5rem;
+    padding-right: 0;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.singlePostImg {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+.singlePostTitle {
+    font-size: 1.75rem;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.singlePostEdit {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    float: right;
+}
+
+.singlePostIcon {
+    font-size: 1.5rem;
+    margin-left: .5rem;
+    cursor: pointer;
+}
+
+.singlePostIcon:first-child {
+    margin-left: 1.5rem;
+    color: teal;
+}
+
+.singlePostIcon:last-child {
+    color: tomato;
+    margin-right: 1.5rem;
+}
+
+.singlePostInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1.75rem;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    color: #b39656;
+    font-size: .9rem;
+    font-family: 'Varela Round', sans-serif;
+
+}
+
+.singlePostDesc {
+    color: #666;
+    font-size: 1.25rem;
+    font-family: 'Lora', serif;
+    margin-bottom: 1.2rem;
+    line-height: 1.625rem;
+}
+
+.singlePostDesc::first-letter {
+    margin-left: 1.25rem;
+    text-transform: uppercase;
+    font-size: 1.875rem;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+}
