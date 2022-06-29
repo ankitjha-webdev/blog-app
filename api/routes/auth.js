@@ -28,6 +28,7 @@ router.post('/login', async (req, res) => {
 
         const validate = await bcrypt.compare(req.body.password, user.password);
         !validate ? res.status(401).json({ message: 'Invalid credentials' }) : null; // if password is not valid return error message to client side (401) and stop the function execution
+        
        const {password, ...userWithoutPassword} = user._doc;
         res.status(200).json(userWithoutPassword);
     } catch (error) {

@@ -1,6 +1,8 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Route, Routes } from "react-router";
 import { Topbar } from "./components/topbar/Topbar";
+import { Context } from './context/Context';
 import { About } from './pages/about/About';
 import  Home  from './pages/home/Home';
 import { Login } from './pages/login/Login';
@@ -8,13 +10,11 @@ import { Register } from "./pages/register/Register";
 import { Setting } from './pages/settings/Setting';
 import { Single } from './pages/single/Single';
 import { Write } from './pages/write/Write';
-// import { Context } from "./context/Context";
-// import { useContext } from "react";
 
 
 function App() {
-  // const { user } = useContext(Context);
-  const user = false
+  const {user} = useContext(Context);
+  // const user = false
 
   return (
     <div className="App">

@@ -6,7 +6,7 @@ export const Sidebar = () => {
         <div className='sidebar'>
             <div className="sidebarItem">
                 <span className="sidebarTitle">About Me</span>
-                <img className='sidebarImg' src={profile} alt="" srcset="" />
+                <img className='sidebarImg' src={profile} alt="" />
                 <p className="sidebarText">
                      Hi 👋 , I'm Ankit Kumar
                     A student of Computer Science! I am always ready to have new experiences, meet new people and learn new things and colloratote with them. I find the idea of creating value for people and impacting the world through my work gratifying.

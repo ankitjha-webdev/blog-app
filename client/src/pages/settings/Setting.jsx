@@ -15,7 +15,7 @@ export const Setting = () => {
             <div className="settingsPP">
               <img src={pp}
               className='settingsPPImg'
-              alt="" srcset="" />
+              alt=""  />
               <label htmlFor="fileInput">
               <i className="settingsPPIcon fa-solid fa-user"></i>
               </label>

@@ -1,7 +1,13 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { Context } from '../../context/Context';
 import './Topbar.css';
 export const Topbar = () => {
-    const user = false;
+    const {user, dispatch} = useContext(Context);
+
+    const handleLogout = () => {
+        dispatch({type: 'LOGOUT'});
+    }
     return (
         <div className='top'>
             <div className="topLeft">
@@ -12,6 +18,7 @@ export const Topbar = () => {
             <div className="topCenter">
                 <ul className="topList">
                     <li className="topListItem">
+                        
                         <Link to='/' className='link'><i className="topIcon fa-solid fa-home"></i>Home </Link>
                     </li>
                     <li className="topListItem">
@@ -26,7 +33,7 @@ export const Topbar = () => {
                         {/* write icon */}
                         <Link to='/write' className='link'><i className="topIcon fa-solid fa-pencil-alt"></i>Write </Link>
                     </li>
-                    <li className="topListItem">
+                    <li className="topListItem" onClick={handleLogout}>
                         {/* logout icon */}
                         {user && "Logout"}
                     </li>
@@ -40,11 +47,13 @@ export const Topbar = () => {
             className='topImage'
              alt="" srcset="" />
             } */}
+            <span className='username'>{user.username}</span>
                 {
                     user ? (
-                        <img src="https://i.picsum.photos/id/1010/5184/3456.jpg?hmac=7SE0MNAloXpJXDxio2nvoshUx9roGIJ_5pZej6qdxXs"
+                        <img src={user.profilePic}
                             className='topImage'
-                            alt="" srcset="" />
+                            alt=""/>
+                            
                     ) : (
                         <ul className='topList'>
                             <li className="topListItem">
@@ -55,7 +64,9 @@ export const Topbar = () => {
                             </li>
                         </ul>
                     )
+                    
                 }
+                
                 <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
             </div>
         </div>

@@ -4,8 +4,11 @@ import { Posts } from '../../components/posts/Posts'
 import { Sidebar } from '../../components/sidebar/Sidebar'
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Context } from '../../context/Context'
+import { useContext } from 'react'
  const Home = () => {
   const [posts, setPosts] = useState([])
+  const {user } = useContext(Context)
 
   useEffect(() =>{
     const fetchPosts = async () =>{
@@ -21,8 +24,8 @@ import axios from 'axios'
     <div className='home'>
       <Posts/>
       <Sidebar/>
+      
     </div>
-
     </>
   )
 }

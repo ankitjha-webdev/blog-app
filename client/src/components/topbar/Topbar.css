@@ -54,6 +54,11 @@
 .topListItem:hover{
     color: black;
 }
+.username{
+    font-size: 18px;
+    color: #444;
+    margin-right: 10px;
+}
 .topSearchIcon{
     margin-left: 15px;
     font-size: 20px;

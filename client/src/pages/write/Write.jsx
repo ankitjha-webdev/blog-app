@@ -5,11 +5,11 @@ export const Write = () => {
     <div className='write'>
         <img src="https://i.postimg.cc/cHhjnHyX/https-postimg-cc-mt3-VWXT8.jpg"
         className="writeImg"
-        alt="" srcset="" />
+        alt="" />
         <form className="writeForm">
             <div className="writeFormGroup">
                 <label htmlFor="fileInput">
-                <i class="writeIcon fa-solid fa-folder-plus"></i>
+                <i className="writeIcon fa-solid fa-folder-plus"></i>
                 </label>
                 <input type="file" className="writeFormControl" id="fileInput" style={{display:"none"}}/>
                 <input type="text" className="writeInput" id="writeTitle" autoFocus={true} placeholder="Title" />

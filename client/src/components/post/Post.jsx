@@ -3,9 +3,9 @@ import "./post.css";
 export const Post = () => {
     return (
         <div className="post">
-            <img className="postImg" src="https://i.postimg.cc/cHhjnHyX/https-postimg-cc-mt3-VWXT8.jpg" alt="" srcset="" />
+            <img className="postImg" src="https://i.postimg.cc/cHhjnHyX/https-postimg-cc-mt3-VWXT8.jpg" alt="" />
             <div className="postInfo">
-                <div className="postCats">
+                <div className="postCats"> 
                     <span className="postCat">Music</span>
                     <span className="postCat">Art</span>
                     <span className="postCat">Travel</span>
